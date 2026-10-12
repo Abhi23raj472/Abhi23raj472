@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" width="860" height="330" role="img" aria-label="Terminal animation: a Playwright test run where all five tests pass.">
+  <defs>
+    <clipPath id="win"><rect width="860" height="330" rx="12"/></clipPath>
+    <linearGradient id="bar" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="860" y2="0">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, 'Cascadia Code', Consolas, Menlo, monospace; font-size: 14px; }
+    .ui { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; font-size: 12px; }
+
+    /* One 12s loop: type the command, tests pass one by one, hold, fade, repeat. */
+    .screen { animation: screen 12s linear infinite; }
+    @keyframes screen { 0%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+
+    .cover { animation: type 12s steps(19) infinite; }
+    @keyframes type { 0%, 3% { transform: translateX(0); } 14%, 100% { transform: translateX(176px); } }
+
+    .row { animation-duration: 12s; animation-timing-function: cubic-bezier(.34, 1.56, .64, 1); animation-iteration-count: infinite; }
+    .r0 { animation-name: r0; } .r1 { animation-name: r1; } .r2 { animation-name: r2; } .r3 { animation-name: r3; }
+    .r4 { animation-name: r4; } .r5 { animation-name: r5; } .r6 { animation-name: r6; } .r7 { animation-name: r7; }
+    @keyframes r0 { 0%, 16% { opacity: 0; transform: translateX(-12px); } 19%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r1 { 0%, 22% { opacity: 0; transform: translateX(-12px); } 25%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r2 { 0%, 30% { opacity: 0; transform: translateX(-12px); } 33%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r3 { 0%, 38% { opacity: 0; transform: translateX(-12px); } 41%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r4 { 0%, 46% { opacity: 0; transform: translateX(-12px); } 49%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r5 { 0%, 54% { opacity: 0; transform: translateX(-12px); } 57%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r6 { 0%, 63% { opacity: 0; transform: translateX(-12px); } 66%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes r7 { 0%, 70% { opacity: 0; transform: translateX(0); } 71%, 100% { opacity: 1; transform: translateX(0); } }
+
+    .progress { transform-box: fill-box; transform-origin: left; animation: progress 12s cubic-bezier(.65, 0, .35, 1) infinite; }
+    @keyframes progress { 0%, 22% { transform: scaleX(0); } 25%, 30% { transform: scaleX(.2); } 33%, 38% { transform: scaleX(.4); } 41%, 46% { transform: scaleX(.6); } 49%, 54% { transform: scaleX(.8); } 57%, 100% { transform: scaleX(1); } }
+
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .cover { display: none; } }
+  </style>
+
+  <g clip-path="url(#win)">
+    <rect width="860" height="330" fill="#0b1020"/>
+    <rect width="860" height="36" fill="#161b2e"/>
+    <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+    <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+    <circle cx="62" cy="18" r="6" fill="#28c840"/>
+    <text class="ui" x="430" y="22" fill="#7c85a8" text-anchor="middle">abhishek@qa: ~/tests</text>
+
+    <g class="screen">
+      <rect class="progress" x="0" y="36" width="860" height="3" fill="url(#bar)"/>
+
+      <text x="28" y="72"><tspan fill="#22d3ee">$</tspan><tspan fill="#e2e8f0" dx="9">npx playwright test</tspan></text>
+      <rect class="cover" x="44" y="56" width="180" height="22" fill="#0b1020"/>
+
+      <g class="row r0"><text x="28" y="102" fill="#7c85a8">Running 5 tests using 4 workers</text></g>
+
+      <g class="row r1"><text x="40" y="136"><tspan fill="#4ade80">✓</tspan><tspan fill="#cbd5e1" dx="10">finds the bug before production does</tspan><tspan fill="#64748b" dx="10">(1.2s)</tspan></text></g>
+      <g class="row r2"><text x="40" y="162"><tspan fill="#4ade80">✓</tspan><tspan fill="#cbd5e1" dx="10">automates the boring regression suite</tspan><tspan fill="#64748b" dx="10">(0.8s)</tspan></text></g>
+      <g class="row r3"><text x="40" y="188"><tspan fill="#4ade80">✓</tspan><tspan fill="#cbd5e1" dx="10">never trusts "works on my machine"</tspan><tspan fill="#64748b" dx="10">(0.4s)</tspan></text></g>
+      <g class="row r4"><text x="40" y="214"><tspan fill="#4ade80">✓</tspan><tspan fill="#cbd5e1" dx="10">ships with confidence, even on Friday</tspan><tspan fill="#64748b" dx="10">(2.1s)</tspan></text></g>
+      <g class="row r5"><text x="40" y="240"><tspan fill="#4ade80">✓</tspan><tspan fill="#cbd5e1" dx="10">keeps learning something new</tspan><tspan fill="#64748b" dx="10">(always)</tspan></text></g>
+
+      <g class="row r6"><text x="40" y="276"><tspan fill="#4ade80" font-weight="700">5 passed</tspan><tspan fill="#64748b" dx="10">(4.5s)</tspan></text></g>
+
+      <g class="row r7">
+        <text x="28" y="308" fill="#22d3ee">$</text>
+        <rect class="cursor" x="46" y="294" width="9" height="18" fill="#e2e8f0"/>
+      </g>
+    </g>
+
+    <rect x=".5" y=".5" width="859" height="329" rx="12" fill="none" stroke="#2a2f45"/>
+  </g>
+</svg>

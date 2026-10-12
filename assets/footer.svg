@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 130" width="860" height="130" role="img" aria-label="Thanks for stopping by.">
+  <defs>
+    <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="860" y2="0">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset=".5" stop-color="#ec4899"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <clipPath id="clip"><rect width="860" height="130" rx="16"/></clipPath>
+  </defs>
+
+  <style>
+    text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .w1 { animation: slide 9s linear infinite; }
+    .w2 { animation: slide 14s linear infinite reverse; }
+    @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-860px); } }
+    .bye { animation: float 3s ease-in-out infinite alternate; }
+    @keyframes float { from { transform: translateY(0); } to { transform: translateY(-4px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <text class="bye" x="430" y="34" font-size="15" font-weight="600" fill="#8b949e" text-anchor="middle">Thanks for stopping by. Go break something (responsibly).</text>
+
+  <g clip-path="url(#clip)" fill="url(#a)">
+    <path class="w2" fill-opacity=".35" d="M0 84 Q107.5 112 215 84 T430 84 T645 84 T860 84 T1075 84 T1290 84 T1505 84 T1720 84 V130 H0 Z"/>
+    <path class="w1" fill-opacity=".7" d="M0 96 Q107.5 68 215 96 T430 96 T645 96 T860 96 T1075 96 T1290 96 T1505 96 T1720 96 V130 H0 Z"/>
+  </g>
+</svg>
